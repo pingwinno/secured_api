@@ -3,6 +3,8 @@ package net.streamarchive.secured_db_api;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.streamarchive.secured_db_api.models.Stream;
+import net.streamarchive.secured_db_api.models.Streamer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

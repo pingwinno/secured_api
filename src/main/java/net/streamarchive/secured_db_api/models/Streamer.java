@@ -1,4 +1,4 @@
-package net.streamarchive.secured_db_api;
+package net.streamarchive.secured_db_api.models;
 
 import javax.persistence.*;
 import java.util.List;

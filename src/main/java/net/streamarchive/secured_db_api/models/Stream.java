@@ -1,4 +1,4 @@
-package net.streamarchive.secured_db_api;
+package net.streamarchive.secured_db_api.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,5 +1,6 @@
 package net.streamarchive.secured_db_api;
 
+import net.streamarchive.secured_db_api.models.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ public class StreamsRestApi {
     @Autowired
     StreamsRepository streamsRepository;
 
+    //@PreAuthorize("#authentication.authorities.contains(#streamer)")
     @RequestMapping(method = RequestMethod.GET)
     public List<Stream> getStreams(@RequestParam(value = "streamer") String streamer) {
         return streamsRepository.findAllByStreamerNameOrderByDateDesc(streamer);

@@ -1,5 +1,6 @@
 package net.streamarchive.secured_db_api;
 
+import net.streamarchive.secured_db_api.models.Streamer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
