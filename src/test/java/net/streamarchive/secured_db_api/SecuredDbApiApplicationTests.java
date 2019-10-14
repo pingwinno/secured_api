@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.streamarchive.secured_db_api.models.Stream;
 import net.streamarchive.secured_db_api.models.Streamer;
+import net.streamarchive.secured_db_api.repositories.StreamerRepository;
+import net.streamarchive.secured_db_api.repositories.StreamsRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

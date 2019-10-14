@@ -1,5 +1,8 @@
-package net.streamarchive.secured_db_api;
+package net.streamarchive.secured_db_api.configs;
 
+import net.streamarchive.secured_db_api.MySavedRequestAwareAuthenticationSuccessHandler;
+import net.streamarchive.secured_db_api.MyUserDetailsService;
+import net.streamarchive.secured_db_api.RestAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -33,13 +36,13 @@ public class SecurityConfiguration
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.exceptionHandling()
+        http.httpBasic().and().exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .and().authorizeRequests().antMatchers("/**").authenticated().and()
                 .formLogin()
                 .successHandler(mySuccessHandler)
-                .failureHandler(myFailureHandler)
-                .and().httpBasic();
+                .failureHandler(myFailureHandler).and().csrf().disable()
+        ;
     }
 
     @Bean

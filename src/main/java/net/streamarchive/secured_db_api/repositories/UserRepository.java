@@ -1,4 +1,4 @@
-package net.streamarchive.secured_db_api;
+package net.streamarchive.secured_db_api.repositories;
 
 import net.streamarchive.secured_db_api.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
