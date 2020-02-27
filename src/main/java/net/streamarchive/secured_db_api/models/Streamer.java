@@ -1,4 +1,4 @@
-package net.streamarchive.secured_db_api;
+package net.streamarchive.secured_db_api.models;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,11 +11,20 @@ public class Streamer {
     private int id;
     private String name;
     private String storageEndpoint;
+    private boolean isHosted;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "streamer")
     private List<Stream> streams;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    public boolean isHosted() {
+        return isHosted;
+    }
+
+    public void setHosted(boolean hosted) {
+        isHosted = hosted;
+    }
 
     public int getId() {
         return id;

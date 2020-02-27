@@ -10,4 +10,5 @@ public class SecuredDbApiApplication {
         SpringApplication.run(SecuredDbApiApplication.class, args);
     }
 
+
 }
